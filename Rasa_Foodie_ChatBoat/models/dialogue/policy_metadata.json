@@ -1,0 +1,48 @@
+{
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": [
+        "cuisine",
+        "email",
+        "price",
+        "location"
+      ]
+    },
+    "action_restaurant": {
+      "slots": [
+        "location"
+      ]
+    },
+    "action_validate_location": {
+      "slots": [
+        "location"
+      ]
+    },
+    "utter_goodbye": {
+      "slots": []
+    },
+    "action_SentEmail": {
+      "slots": [
+        "email"
+      ]
+    },
+    "utter_no_email_sent": {
+      "slots": []
+    },
+    "utter_Invalid_location": {
+      "slots": [
+        "location"
+      ]
+    }
+  },
+  "max_histories": [
+    5,
+    5
+  ],
+  "policy_names": [
+    "rasa_core.policies.memoization.MemoizationPolicy",
+    "rasa_core.policies.keras_policy.KerasPolicy"
+  ],
+  "rasa_core": "0.10.1"
+}
